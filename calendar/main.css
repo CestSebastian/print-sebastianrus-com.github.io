@@ -1,0 +1,26 @@
+.app {
+  background-color: black;
+  width: 1000px;
+  margin: 0px auto;
+}
+
+.calendar {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.day-container {
+  border-radius: 8px;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.day-label {
+  margin: 10px;
+}
