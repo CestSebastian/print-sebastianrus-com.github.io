@@ -1,1 +1,1 @@
-# print-sebastianrus-com.github.io
+# print.sebastianrus.com
