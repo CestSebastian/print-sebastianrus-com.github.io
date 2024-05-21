@@ -70,6 +70,7 @@ nav > button > i {
 .days-of-the-week > div {
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 4px;
+  text-align: center;
   width: 100px;
 }
 
