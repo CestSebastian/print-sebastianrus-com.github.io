@@ -1,5 +1,6 @@
 .app {
-  background-color: black;
+  /* background-color: black; */
+  background-image: url('./assets/months/May.jpg');
   display: flex;
   flex-direction: column;
   /* height: 1000px; */
