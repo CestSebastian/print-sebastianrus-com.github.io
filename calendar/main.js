@@ -18,7 +18,7 @@ for (let i = 0; i < weeksInMonth; i++) { // weeksInMonth weeks displayed for mon
   	let dayContainer = document.createElement('div');
   	dayContainer.setAttribute('class', 'day-container');
     
-    let dayLabel = document.createElement('span');
+    let dayLabel = document.createElement('div');
   	dayLabel.setAttribute('class', 'day-label');
     dayLabel.textContent = firstDayOnCalendar.getDate();
     

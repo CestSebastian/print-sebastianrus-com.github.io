@@ -12,10 +12,20 @@
     <div class="app">
       <nav class="no-print">
         <button>&lt; Prev Month</button>
-        <button>Print <i class="material-icons">print</i></button>
+        <button onclick="window.print()">Print <i class="material-icons">print</i></button>
         <button>Next Month &gt;</button>
       </nav>
-      <div id="calendar-conainer" class="calendar"></div>
+      <div id="calendar-conainer" class="calendar">
+        <div class="row days-of-the-week">
+          <div>Monday</div>
+          <div>Tuesday</div>
+          <div>Wednesday</div>
+          <div>Thursday</div>
+          <div>Friday</div>
+          <div>Saturday</div>
+          <div>Sunday</div>
+        </div>
+      </div>
     </div>
     
     <!-- js code -->
