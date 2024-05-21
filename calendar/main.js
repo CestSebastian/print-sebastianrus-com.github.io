@@ -7,8 +7,8 @@ let weeksInMonth = Math.ceil( used / 7);
 
 
 
-let firstDayOnCalendar = new Date(2024, 4, 1 - firstDayOfMonth.getDay() + 1)
-console.log(firstDayOfMonth, firstDayOnCalendar, used, weeksInMonth)
+let firstDayOnCalendar = new Date(2024, 4, 1 - firstDayOfMonth.getDay() + 1, 12)
+// console.log(firstDayOfMonth, firstDayOnCalendar, used, weeksInMonth)
 
 for (let i = 0; i < weeksInMonth; i++) { // weeksInMonth weeks displayed for month
 	let row = document.createElement('div');
