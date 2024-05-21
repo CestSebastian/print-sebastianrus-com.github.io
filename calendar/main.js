@@ -1,33 +1,60 @@
 let calendarContainer = document.getElementById('calendar-conainer');
 
-let firstDayOfMonth = new Date(2024, 4, 1);
-let lastOfMonth = new Date(2024, 5, 0);
-let used = firstDayOfMonth.getDay() + lastOfMonth.getDate();
-let weeksInMonth = Math.ceil( used / 7);
 
 
+// console.log(thisYear, thisMonth)
 
-let firstDayOnCalendar = new Date(2024, 4, 1 - firstDayOfMonth.getDay() + 1, 12)
-// console.log(firstDayOfMonth, firstDayOnCalendar, used, weeksInMonth)
+function update() {
+  calendarContainer.innerHTML = '<div class="row dotw"><div>Monday</div><div>Tuesday</div><div>Wednesday</div><div>Thursday</div><div>Friday</div><div>Saturday</div><div>Sunday</div></div>';
 
-for (let i = 0; i < weeksInMonth; i++) { // weeksInMonth weeks displayed for month
-	let row = document.createElement('div');
-  row.setAttribute('class', 'row');
-  
-  for (let j = 0; j < 7; j++) {
-  	let dayContainer = document.createElement('div');
-  	dayContainer.setAttribute('class', 'day-container');
-    
-    let dayLabel = document.createElement('div');
-  	dayLabel.setAttribute('class', 'day-label');
-    dayLabel.textContent = firstDayOnCalendar.getDate();
-    
-    dayContainer.appendChild(dayLabel);
-    row.appendChild(dayContainer);
-    
-    // add day to date
-    firstDayOnCalendar.setDate(firstDayOnCalendar.getDate() + 1);
+  let today = new Date();
+  let thisYear = today.getFullYear();
+  let thisMonth = today.getMonth() + 1; // thisMonth will be 1 .. 12
+
+  if (location.hash) {
+    [
+      thisYear,
+      thisMonth
+    ] = location.hash.substring(1).split('-').map(e => parseInt(e, 10))
   }
-  
-  calendarContainer.appendChild(row);
+
+  let firstDayOfMonth = new Date(thisYear, thisMonth - 1, 1, 12);
+  let lastOfMonth = new Date(thisYear, thisMonth, 0, 12);
+  let used = firstDayOfMonth.getDay() + lastOfMonth.getDate() + 6;
+  let weeksInMonth = Math.ceil( used / 7);
+
+  // UPDATE HTML FOR CURRENT MONTH
+  const longMonth = firstDayOfMonth.toLocaleString('default', { month: 'long' });
+  document.getElementById('title-h1').textContent = longMonth + ' ' + firstDayOfMonth.getFullYear();
+  document.getElementById('app-container').style.backgroundImage = `url('./assets/months/${longMonth}.jpg')`;
+  document.getElementById('prev-btn').setAttribute('href', `#${thisYear}-${thisMonth - 1}`);
+  document.getElementById('next-btn').setAttribute('href', `#${thisYear}-${thisMonth + 1}`);
+
+  let firstDayOnCalendar = new Date(thisYear, thisMonth - 1, 1 - (firstDayOfMonth.getDay() || 7) + 1, 12)
+  console.log(firstDayOfMonth, firstDayOfMonth.getDay(), firstDayOnCalendar, used, weeksInMonth)
+
+  for (let i = 0; i < weeksInMonth; i++) { // weeksInMonth weeks displayed for month
+  	let row = document.createElement('div');
+    row.setAttribute('class', 'row');
+    
+    for (let j = 0; j < 7; j++) {
+    	let dayContainer = document.createElement('div');
+    	dayContainer.setAttribute('class', 'day-container');
+      
+      let dayLabel = document.createElement('div');
+    	dayLabel.setAttribute('class', 'day-label');
+      dayLabel.textContent = firstDayOnCalendar.getDate();
+      
+      dayContainer.appendChild(dayLabel);
+      row.appendChild(dayContainer);
+      
+      // add day to date
+      firstDayOnCalendar.setDate(firstDayOnCalendar.getDate() + 1);
+    }
+    
+    calendarContainer.appendChild(row);
+  }
 }
+
+update()
+addEventListener("hashchange", update); 

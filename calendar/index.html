@@ -12,24 +12,18 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <div class="app">
+    <div id="app-container" class="app">
       <nav class="no-print">
-        <button>&lt; Prev Month</button>
-        <button onclick="window.print()">Print <i class="material-icons">print</i></button>
-        <button>Next Month &gt;</button>
+        <a id="prev-btn">&lt; Prev Month</a>
+        <a href="javascript:window.print()">Print <i class="material-icons">print</i></a>
+        <a id="next-btn">Next Month &gt;</a>
       </nav>
-      <h1>May 2024</h1>
-      <div id="calendar-conainer" class="calendar">
-        <div class="row days-of-the-week">
-          <div>Monday</div>
-          <div>Tuesday</div>
-          <div>Wednesday</div>
-          <div>Thursday</div>
-          <div>Friday</div>
-          <div>Saturday</div>
-          <div>Sunday</div>
-        </div>
-      </div>
+      <h1 id="title-h1">May 2024</h1>
+      <div id="calendar-conainer" class="calendar"></div>
+
+      <footer>
+        Printable <a href="https://print.sebastianrus.com/calendar/index.html">Calendar</a> from <a href="https://www.SebastianRus.com">SebastianRus.com</a>
+      </footer>
     </div>
     
     <!-- js code -->

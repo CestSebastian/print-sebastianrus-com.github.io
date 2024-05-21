@@ -31,19 +31,23 @@ nav {
   justify-content: space-around;
 }
 
-nav > button {
+nav > a {
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
   border: none;
+  color: black;
   cursor: pointer;
   display: flex;
   font-size: 24px;
   justify-content: center;
   margin: 8px 0px;
   padding: 4px 0px;
+  text-decoration: none;
   width: 200px;
 }
 
-nav > button > i {
+nav > a > i {
   margin-left: 8px;
 }
 
@@ -66,21 +70,29 @@ h1 {
 }
 
 .day-container {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid white;
   border-radius: 8px;
   height: 75px;
   width: 75px;
 }
 
-.days-of-the-week > div {
-  background-color: rgba(255, 255, 255, 0.7);
+.dotw > div {
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   font-size: 11px;
-  padding: 4px 8px;
+  padding: 4px 0px;
   text-align: center;
+/*  text-shadow: 0px 0px 8px white;*/
   width: 75px;
 }
 
 .day-label {
   margin: 8px;
+}
+
+footer {
+  margin: 4px;
+  text-align: center;
+  text-shadow: 0px 0px 5px white;
 }
