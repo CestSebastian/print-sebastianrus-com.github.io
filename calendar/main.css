@@ -1,8 +1,10 @@
 .app {
   background-color: black;
-  height: 1000px;
-  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  /* height: 1000px; */
   margin: 0px auto;
+  width: 1000px;
 }
 
 nav {
@@ -27,6 +29,8 @@ nav > button > i {
 }
 
 .calendar {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
