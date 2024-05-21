@@ -2,6 +2,10 @@
   * {
       -webkit-print-color-adjust: exact;
   }
+
+  .no-print {
+    display: none !important;
+  }
 }
 
 .app {
@@ -24,10 +28,10 @@ nav > button {
   align-items: center;
   cursor: pointer;
   display: flex;
-  margin: 8px 0px;
-  padding: 4px 0px;
   font-size: 24px;
   justify-content: center;
+  margin: 8px 0px;
+  padding: 4px 0px;
   width: 200px;
 }
 
@@ -38,7 +42,8 @@ nav > button > i {
 .calendar {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  margin: 40px auto;
+  width: 80%;
 }
 
 .row {
