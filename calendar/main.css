@@ -9,6 +9,12 @@
   }
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .app {
   /* background-color: black; */
   background-image: url('./assets/months/May.jpg');
@@ -27,6 +33,7 @@ nav {
 
 nav > button {
   align-items: center;
+  border: none;
   cursor: pointer;
   display: flex;
   font-size: 24px;
@@ -53,7 +60,7 @@ nav > button > i {
   margin-bottom: 20px;
 }
 
-.day-container {
+.row > div {
   border-radius: 8px;
   width: 100px;
   height: 100px;
