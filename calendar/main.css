@@ -60,11 +60,17 @@ nav > button > i {
   margin-bottom: 20px;
 }
 
-.row > div {
-  border-radius: 8px;
-  width: 100px;
-  height: 100px;
+.day-container {
   background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  height: 100px;
+  width: 100px;
+}
+
+.days-of-the-week > div {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  width: 100px;
 }
 
 .day-label {
