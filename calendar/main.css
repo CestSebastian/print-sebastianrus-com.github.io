@@ -1,3 +1,9 @@
+@media print {
+  * {
+      -webkit-print-color-adjust: exact;
+  }
+}
+
 .app {
   /* background-color: black; */
   background-image: url('./assets/months/May.jpg');
