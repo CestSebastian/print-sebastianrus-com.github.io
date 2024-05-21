@@ -20,7 +20,7 @@ function update() {
 
   let firstDayOfMonth = new Date(thisYear, thisMonth - 1, 1, 12);
   let lastOfMonth = new Date(thisYear, thisMonth, 0, 12);
-  let used = firstDayOfMonth.getDay() + lastOfMonth.getDate() + 6;
+  let used = (firstDayOfMonth.getDay() || 7) - 1 + lastOfMonth.getDate();
   let weeksInMonth = Math.ceil( used / 7);
 
   // UPDATE HTML FOR CURRENT MONTH
