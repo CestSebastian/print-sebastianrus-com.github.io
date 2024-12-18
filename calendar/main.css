@@ -63,14 +63,14 @@ h1 {
   text-align: center;
   /* text-shadow: 0px 0px 5px white; */
   font-size: 4em;
-  margin: 10px 0 0;
+  margin: 24px 0 0;
 }
 
 .calendar {
   display: flex;
   flex-direction: column;
   margin: 20px auto;
-  width: 70%;
+  width: 90%;
 }
 
 .row {
@@ -83,23 +83,30 @@ h1 {
   /* background-color: rgba(255, 255, 255, 0.6); */
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 8px;
-  height: 95px;
-  width: 95px;
+  height: 100px;
+  width: 120px;
 }
 
 .dotw > div {
   /* background-color: rgba(255, 255, 255, 0.3); */
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  /* border: 1px solid rgba(0, 0, 0, 0.3); */
   border-radius: 4px;
-  font-size: 11px;
   padding: 4px 0px;
   text-align: center;
-/*  text-shadow: 0px 0px 8px white;*/
-  width: 95px;
+  /*  text-shadow: 0px 0px 8px white;*/
+  width: 120px;
+  font-family: "Tangerine", serif;
+  font-weight: 700;
+  font-size: 2em;
+  font-style: normal;
 }
 
 .day-label {
   margin: 8px;
+}
+
+.gray-label {
+  color: #ccc;
 }
 
 footer {

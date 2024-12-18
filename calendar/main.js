@@ -43,7 +43,7 @@ function update() {
     	dayContainer.setAttribute('class', 'day-container');
       
       let dayLabel = document.createElement('div');
-    	dayLabel.setAttribute('class', 'day-label');
+    	dayLabel.setAttribute('class', 'day-label' + (thisMonth === firstDayOnCalendar.getMonth() + 1 ? '' : 'gray-label'));
       dayLabel.textContent = firstDayOnCalendar.getDate();
       
       dayContainer.appendChild(dayLabel);
