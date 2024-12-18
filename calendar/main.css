@@ -10,14 +10,16 @@
 }
 
 body {
+
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin: 0;
 }
 
 .app {
-  /* background-color: black; */
-  background-image: url('./assets/months/May.jpg');
+  background-color: white;
+  /* background-image: url('./assets/months/May.jpg'); */
   display: flex;
   flex-direction: column;
   /* height: 1000px; */
@@ -52,6 +54,9 @@ nav > a > i {
 }
 
 h1 {
+  font-family: "Tangerine", serif;
+  font-weight: 700;
+  font-style: normal;
   text-align: center;
   text-shadow: 0px 0px 5px white;
 }

@@ -26,7 +26,8 @@ function update() {
   // UPDATE HTML FOR CURRENT MONTH
   const longMonth = firstDayOfMonth.toLocaleString('default', { month: 'long' });
   document.getElementById('title-h1').textContent = longMonth + ' ' + firstDayOfMonth.getFullYear();
-  document.getElementById('app-container').style.backgroundImage = `url('./assets/months/${longMonth}.jpg')`;
+  // document.getElementById('app-container').style.backgroundImage = `url('./assets/months/${longMonth}.jpg')`;
+  document.body.style.backgroundImage = `url('./assets/months/${longMonth}.jpg')`;
   document.getElementById('prev-btn').setAttribute('href', `#${thisMonth > 1 ? thisYear : thisYear - 1}-${thisMonth > 1 ? thisMonth - 1 : 12}`);
   document.getElementById('next-btn').setAttribute('href', `#${thisMonth < 12 ? thisYear : thisYear + 1}-${thisMonth < 12 ? thisMonth + 1 : 1}`);
 
