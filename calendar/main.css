@@ -18,15 +18,17 @@ body {
   font-weight: 400;
   font-style: normal;
   margin: 0;
+  height: 100vh;
+  display: flex;
 }
 
 .app {
-  background-color: white;
+/*   background-color: white; */
   /* background-image: url('./assets/months/May.jpg'); */
   display: flex;
   flex-direction: column;
   /* height: 1000px; */
-  margin: 0px auto;
+  margin: auto;
   width: 1000px;
 }
 
