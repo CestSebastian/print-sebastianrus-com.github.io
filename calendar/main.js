@@ -1,6 +1,19 @@
 let calendarContainer = document.getElementById('calendar-conainer');
 
-
+const bgColors = {
+  'January': '#f0b1ac',
+  'February': '#efbc87',
+  'March': '#f4d4a3',
+  'April': '#a9cebd',
+  'May': '#a8cdd3',
+  'June': '#c4dbe9',
+  'July': '#c4dbe9',
+  'August': '#c4dbe9',
+  'September': '#f0bd88',
+  'October': '#f2d3a4',
+  'November': '#a9cebd',
+  'December': '#a8cdd3',
+};
 
 // console.log(thisYear, thisMonth)
 
@@ -28,7 +41,8 @@ function update() {
   document.getElementById('title-h1').textContent = longMonth + ' ' + firstDayOfMonth.getFullYear();
   document.title = 'Free Printable ' + longMonth + ' ' + firstDayOfMonth.getFullYear() + ' Calendar from SebastianRus.com';
   // document.getElementById('app-container').style.backgroundImage = `url('./assets/months/${longMonth}.jpg')`;
-  document.body.style.backgroundImage = `url('./assets/months/${longMonth}.jpg')`;
+  // document.body.style.backgroundImage = `url('./assets/months/${longMonth}.jpg')`;
+  document.body.style.backgroundColor = bgColors[longMonth];
   document.getElementById('prev-btn').setAttribute('href', `#${thisMonth > 1 ? thisYear : thisYear - 1}-${thisMonth > 1 ? thisMonth - 1 : 12}`);
   document.getElementById('next-btn').setAttribute('href', `#${thisMonth < 12 ? thisYear : thisYear + 1}-${thisMonth < 12 ? thisMonth + 1 : 1}`);
 
