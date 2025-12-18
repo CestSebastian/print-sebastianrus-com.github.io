@@ -4,25 +4,180 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Printable Utils</title>
+    <title>Printable Utils | Free Calendars & Tools</title>
     <meta
       name="description"
-      content="Printable Utils - A collection of printable utilities including a calendar and QR code generator."
+      content="Free printable utilities including high-quality calendars for 2025-2027 and a fast QR code generator."
     />
     <meta
       name="keywords"
-      content="Printable, Calendar, QR Code Generator, Utilities"
+      content="Printable, Calendar, QR Code Generator, Utilities, 2025 Calendar, 2026 Calendar"
     />
     <meta name="author" content="Sebastian Rus" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.css" />
+    <link href="fonts.googleapis.com" rel="stylesheet" />
+
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-hover: #1d4ed8;
+        --text-dark: #1e293b;
+        --text-light: #64748b;
+        --bg: #f8fafc;
+        --card-bg: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: var(--bg);
+        color: var(--text-dark);
+        margin: 0;
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        flex: 1;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      h1 {
+        font-family: "Comfortaa", cursive;
+        font-size: 3rem;
+        margin: 0;
+        color: var(--primary);
+        letter-spacing: -1px;
+      }
+
+      .lead {
+        font-size: 1.2rem;
+        color: var(--text-light);
+        max-width: 600px;
+        margin: 10px auto 0;
+      }
+
+      /* Grid Layout */
+      .tool-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin-top: 40px;
+      }
+
+      /* Card Styling */
+      .card {
+        background: var(--card-bg);
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: inherit;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+
+      .card h2 {
+        font-family: "Comfortaa", cursive;
+        margin: 0 0 10px 0;
+        font-size: 1.5rem;
+        color: var(--primary);
+      }
+
+      .card p {
+        margin: 0 0 20px 0;
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+
+      .btn {
+        margin-top: auto;
+        display: inline-block;
+        background: var(--primary);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 500;
+        text-align: center;
+        transition: background 0.2s;
+      }
+
+      .card:hover .btn {
+        background: var(--primary-hover);
+      }
+
+      /* Year Badge List */
+      .year-links {
+        margin-top: 15px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .year-badge {
+        font-size: 0.85rem;
+        background: #eff6ff;
+        color: var(--primary);
+        padding: 4px 12px;
+        border-radius: 99px;
+        text-decoration: none;
+        font-weight: 500;
+        border: 1px solid #dbeafe;
+      }
+
+      .year-badge:hover {
+        background: var(--primary);
+        color: white;
+      }
+
+      footer {
+        text-align: center;
+        padding: 40px 20px;
+        background: #f1f5f9;
+        color: var(--text-light);
+        font-size: 0.9rem;
+        border-top: 1px solid #e2e8f0;
+      }
+
+      footer a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2rem;
+        }
+        .container {
+          padding: 20px;
+        }
+      }
+    </style>
+
     <script
-      async=""
+      async
       src="https://www.googletagmanager.com/gtag/js?id=G-WPC56V95GY"
     ></script>
     <script>
@@ -31,53 +186,69 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-WPC56V95GY");
     </script>
   </head>
   <body>
-    <h1>Printable Utils</h1>
-    <p>
-      Welcome to the Printable Utils page. Here you can find links to various
-      printable utilities.
-    </p>
-    <ul>
-      <li>
-        <a href="https://print.sebastianrus.com/calendar/index.html"
-          >Printable Calendar</a
-        >
-      </li>
-      <li>
-        <a href="https://print.sebastianrus.com/qr/index.html"
-          >QR Code Generator</a
-        >
-      </li>
-      <li>
-        <a href="https://print.sebastianrus.com/calendar/2025.html"
-          >Printable 2025 Calendar</a
-        >
-      </li>
-      <li>
-        <a href="https://print.sebastianrus.com/calendar/2026.html"
-          >Printable 2026 Calendar</a
-        >
-      </li>
-      <li>
-        <a href="https://print.sebastianrus.com/calendar/2027.html"
-          >Printable 2027 Calendar</a
-        >
-      </li>
-    </ul>
+    <div class="container">
+      <header>
+        <h1>Printable Utils</h1>
+        <p class="lead">
+          Simple, high-quality tools designed to be printed. No fluff, just
+          utility.
+        </p>
+      </header>
+
+      <main class="tool-grid">
+        <!-- QR Code Generator -->
+        <a href="https://print.sebastianrus.com/qr/index.html" class="card">
+          <h2>QR Generator</h2>
+          <p>Instantly generate clean, scannable QR codes for URLs or text.</p>
+          <span class="btn">Create QR Code</span>
+        </a>
+
+        <!-- Main Calendar -->
+        <div class="card">
+          <h2>Calendars</h2>
+          <p>
+            Professional PDF-ready calendars with clean layouts and Monday-start
+            options.
+          </p>
+          <a
+            href="https://print.sebastianrus.com/calendar/index.html"
+            class="btn"
+            style="margin-bottom: 15px"
+            >View Main Calendar</a
+          >
+
+          <div class="year-links">
+            <a
+              href="https://print.sebastianrus.com/calendar/2025.html"
+              class="year-badge"
+              >2025</a
+            >
+            <a
+              href="https://print.sebastianrus.com/calendar/2026.html"
+              class="year-badge"
+              >2026</a
+            >
+            <a
+              href="https://print.sebastianrus.com/calendar/2027.html"
+              class="year-badge"
+              >2027</a
+            >
+          </div>
+        </div>
+      </main>
+    </div>
 
     <footer>
-      Printable
-      <a href="https://print.sebastianrus.com/calendar/index.html">Calendar</a>
-      from <a href="https://www.SebastianRus.com">SebastianRus.com</a><br />
-      Printable
-      <a href="https://print.sebastianrus.com/qr/index.html"
-        >QR Code Generator</a
-      >
-      from <a href="https://www.SebastianRus.com">SebastianRus.com</a>
+      <p>
+        Part of the
+        <a href="https://www.SebastianRus.com">SebastianRus.com</a>
+        ecosystem.<br />
+        Built for speed and high-quality printing.
+      </p>
     </footer>
   </body>
 </html>
