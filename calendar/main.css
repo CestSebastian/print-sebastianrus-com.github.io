@@ -4,10 +4,6 @@
       print-color-adjust: exact;
   }
 
-  body {
-    background-color: none;
-  }
-
   .no-print {
     display: none !important;
   }
